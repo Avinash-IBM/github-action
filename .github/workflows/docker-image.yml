@@ -24,7 +24,7 @@ jobs:
       run: |
           docker save \
           -o image.tar \
-          ${{ secrets.DOCKER_USERNAME }}/myapp:${{ github.sha }}
+          aviraj3109/myapp:${{ github.sha }}
 
     - name: Upload Image
       uses: actions/upload-artifact@v4
