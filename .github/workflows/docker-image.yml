@@ -20,7 +20,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag ${{ my-image-name}}:$(date +%s)
+      run: docker build . --file Dockerfile --tag myapp:$(date +%s)
     - name: Save Image
       run: |
           docker save \
@@ -58,5 +58,5 @@ jobs:
 
       - name: Push Image
         run: |
-          docker push ${{ secrets.DOCKER_USERNAME }}/aviworkflow}}:${{ github.sha }}
+          docker push ${{ secrets.DOCKER_USERNAME }}/myapp}}:${{ github.sha }}
   
