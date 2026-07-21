@@ -6,7 +6,7 @@ on:
   pull_request:
     branches: [ "main" ]
 env:
-      my-image-name: avi
+      IMAGE_NAME: myapp
 
 jobs:
 
