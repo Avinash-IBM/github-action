@@ -56,5 +56,5 @@ jobs:
 
       - name: Push Image
         run: |
-          docker push ${{ secrets.DOCKER_USERNAME }}/${{ my-image-name}}:${{ github.sha }}
+          docker push ${{ secrets.DOCKER_USERNAME }}/aviworkflow}}:${{ github.sha }}
   
